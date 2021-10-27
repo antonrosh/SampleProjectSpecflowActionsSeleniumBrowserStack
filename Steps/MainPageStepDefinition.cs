@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using FluentAssertions.Execution;
 using SampleProjectSpecflowActionsSeleniumBrowserStack.PageObjects;
-using SpecFlow.Actions.Selenium;
 using TechTalk.SpecFlow;
 
 namespace SampleProjectSpecflowActionsSeleniumBrowserStack.Steps
@@ -9,13 +8,7 @@ namespace SampleProjectSpecflowActionsSeleniumBrowserStack.Steps
     [Binding]
     public sealed class MainPageStepDefinition
     {
-        // private readonly BrowserDriver _browserDriver;
         private readonly MainPage _mainPage;
-
-        /*public MainPageStepDefinition(BrowserDriver browserDriver)
-        {
-            _browserDriver = browserDriver;
-        }*/
 
         public MainPageStepDefinition(MainPage mainPage)
         {
@@ -26,7 +19,6 @@ namespace SampleProjectSpecflowActionsSeleniumBrowserStack.Steps
         public void GivenINavigatedToAmazonUsing()
         {
             _mainPage.GoTo();
-            //_browserDriver.Current.Manage().Window.Maximize();
         }
 
         [Then(@"I should see Main Page")]
